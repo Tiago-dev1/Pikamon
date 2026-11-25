@@ -1,0 +1,787 @@
+{
+  "creatures": [
+    {
+      "id": "pyrokit",
+      "name": "Pyrokit",
+      "title": "Raposa de Brasa",
+      "type": "fogo",
+      "types": [
+        "fogo",
+        "lutador"
+      ],
+      "description": "Ágil e impetuosa, combina chamas intensas com artes marciais instintivas.",
+      "stats": {
+        "maxHp": 175,
+        "atk": 66,
+        "def": 42,
+        "spd": 66
+      },
+      "signatureMoveId": "meteoro_rubi",
+      "weakMoveId": "faisca_brasa",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#ff5f43",
+          "d": "#a81c2b",
+          "h": "#ffd166",
+          "w": "#fff7e6",
+          "a": "#ff9f1c"
+        },
+        "pixels": [
+          "..kk........kk..",
+          ".khhk......khhk.",
+          ".kbhhk....khhbk.",
+          ".kbbbkkkkkkbbbk.",
+          ".kbbbbbbbbbbbbk.",
+          "kbbbwkbkkbkwbbbk",
+          "kbbbbbbbbbbbbbbk",
+          ".kddbbhhhhbbddk.",
+          "..kbbhhhhhhbbk.k",
+          "..kbbbbbbbbbbkha",
+          "..kbbddddddbbkha",
+          "..kbbbbbbbbbbkhh",
+          "...kbbk..kbbkkhk",
+          "...kddk..kddk...",
+          "...khhk..khhk...",
+          "...kkk....kkk..."
+        ]
+      }
+    },
+    {
+      "id": "aquafin",
+      "name": "Aquafin",
+      "title": "Salamandra Marinha",
+      "type": "agua",
+      "types": [
+        "agua",
+        "gelo"
+      ],
+      "description": "Resistente e fluida, controla correntes frias e marés abissais.",
+      "stats": {
+        "maxHp": 195,
+        "atk": 55,
+        "def": 56,
+        "spd": 52
+      },
+      "signatureMoveId": "mare_abissal",
+      "weakMoveId": "jato_bolha",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#38bdf8",
+          "d": "#0369a1",
+          "h": "#bae6fd",
+          "w": "#f0f9ff",
+          "a": "#fb7185"
+        },
+        "pixels": [
+          ".....kkkkkk.....",
+          ".ak.khhhhhhk.ka.",
+          "aakkbbbbbbbbkkaa",
+          "ak.kbbbbbbbbk.ka",
+          "...kbbwbbwbbk...",
+          "...kbbbbbbbbk...",
+          "...kdhhhhhhdk...",
+          "..kkbbbbbbbbkk..",
+          ".kddbbbbbbbbddk.",
+          ".kddbbhhhhbbddk.",
+          "..kkbbbbbbbbkk..",
+          "...kbbddddbbk.kk",
+          "...kbbk..kbbkkhh",
+          "...kddk..kddkddk",
+          "...khhk..khhkkk.",
+          "...kkk....kkk..."
+        ]
+      }
+    },
+    {
+      "id": "florabrot",
+      "name": "Florabrot",
+      "title": "Espírito de Musgo",
+      "type": "planta",
+      "types": [
+        "planta",
+        "terra"
+      ],
+      "description": "Enraizado na terra fértil, regenera vida e esmaga com vinhas antigas.",
+      "stats": {
+        "maxHp": 200,
+        "atk": 52,
+        "def": 58,
+        "spd": 48
+      },
+      "signatureMoveId": "espinho_ancestral",
+      "weakMoveId": "folha_corte",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#4ade80",
+          "d": "#15803d",
+          "h": "#bbf7d0",
+          "w": "#fef9c3",
+          "a": "#f472b6"
+        },
+        "pixels": [
+          "......khhk......",
+          ".....khaaak.....",
+          "....khaaaaahk...",
+          "....khaaahbhk...",
+          "...kbbkbbkbbk...",
+          "...kbbbbbbbbk...",
+          "..kbbwbbwbbbbk..",
+          "..kbbbbbbbbbbk..",
+          "..kddbbbbbbddk..",
+          ".kdddbbhhbbdddk.",
+          ".kddddddddddddk.",
+          "..kbbddddddbbk..",
+          "...kbbbbbbbbk...",
+          "...kbbk..kbbk...",
+          "...kddk..kddk...",
+          "...kkk....kkk..."
+        ]
+      }
+    },
+    {
+      "id": "zephyrix",
+      "name": "Zephyrix",
+      "title": "Falcão dos Ventos",
+      "type": "aereo",
+      "types": [
+        "aereo",
+        "raio"
+      ],
+      "description": "Soberano dos céus que corta tempestades gerando descargas velozes.",
+      "stats": {
+        "maxHp": 170,
+        "atk": 62,
+        "def": 44,
+        "spd": 72
+      },
+      "signatureMoveId": "ciclone_celeste",
+      "weakMoveId": "rajada_leve",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#7dd3fc",
+          "d": "#0284c7",
+          "h": "#e0f2fe",
+          "w": "#ffffff",
+          "a": "#facc15"
+        },
+        "pixels": [
+          ".....kkkk.......",
+          "....khhhhk......",
+          "...khhbhhhaak...",
+          "...kbbbbbbbbak..",
+          "..kbbwbbwbbbak..",
+          "..kbbbbbbbbbbk..",
+          ".kdbbbhhbbbddk..",
+          "kddbbbbbbbbdddk.",
+          "kddbbbbbbbbdddk.",
+          ".kdbbbddbbbddk..",
+          "..kbbbbbbbbbbk..",
+          "...kbbbbbbbbk...",
+          "...kddbbbbddk...",
+          "...kaakk..kaakk.",
+          "....kk......kk.."
+        ]
+      }
+    },
+    {
+      "id": "terramon",
+      "name": "Terramon",
+      "title": "Besta Telúrica",
+      "type": "terra",
+      "types": [
+        "terra",
+        "pedra"
+      ],
+      "description": "Corpo de granito e barro denso capaz de fender o solo sob os pés.",
+      "stats": {
+        "maxHp": 210,
+        "atk": 60,
+        "def": 64,
+        "spd": 38
+      },
+      "signatureMoveId": "fenda_sismica",
+      "weakMoveId": "lampejo_lama",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#d97706",
+          "d": "#78350f",
+          "h": "#fde68a",
+          "w": "#f8fafc",
+          "a": "#a8a29e"
+        },
+        "pixels": [
+          "....kk....kk....",
+          "...khhk..khhk...",
+          "..khhhbkkbhhhk..",
+          "..kbbbbbbbbbbk..",
+          ".kbbwbbbbwbbbbk.",
+          ".kbbbbbbbbbbbbk.",
+          ".kddbbhhhhbbddk.",
+          "kkddbbbbbbbbddkk",
+          "kddbbbbbbbbbbddk",
+          "kddbbbddddbbbddk",
+          ".kddbbbbbbbbddk.",
+          "..kddddddddddk..",
+          "..kbbk....kbbk..",
+          ".kbbbk....kbbbk.",
+          ".kdddk....kdddk.",
+          "..kkk......kkk.."
+        ]
+      }
+    },
+    {
+      "id": "granitox",
+      "name": "Granitox",
+      "title": "Colosso Mineral",
+      "type": "pedra",
+      "types": [
+        "pedra",
+        "metal"
+      ],
+      "description": "Formado em câmaras magmáticas de titânio e quartzo, inabalável perante impactos.",
+      "stats": {
+        "maxHp": 220,
+        "atk": 56,
+        "def": 72,
+        "spd": 32
+      },
+      "signatureMoveId": "colapso_cristal",
+      "weakMoveId": "estilhaco_rocha",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#a8a29e",
+          "d": "#57534e",
+          "h": "#f5f5f4",
+          "w": "#ffffff",
+          "a": "#f472b6"
+        },
+        "pixels": [
+          "......kkkk......",
+          "....kkaaaakk....",
+          "...kaaaaaaaak...",
+          "..kaahhbbhhaak..",
+          "..kbbbbbbbbbbk..",
+          ".kbbwbbbbwbbbbk.",
+          ".kbbbbbbbbbbbbk.",
+          ".kddbbhhhhbbddk.",
+          "kkddbbbbbbbbddkk",
+          "kddbbbddddbbbddk",
+          "kddbbbbbbbbbbddk",
+          ".kddddddddddddk.",
+          "..kbbbbbbbbbbk..",
+          "..kbbk....kbbk..",
+          ".kdddk....kdddk.",
+          "..kkk......kkk.."
+        ]
+      }
+    },
+    {
+      "id": "voltrix",
+      "name": "Voltrix",
+      "title": "Lince Relâmpago",
+      "type": "raio",
+      "types": [
+        "raio",
+        "aereo"
+      ],
+      "description": "Velocidade impressionante; acumula estática no pelo e descarrega raios ágeis.",
+      "stats": {
+        "maxHp": 168,
+        "atk": 68,
+        "def": 38,
+        "spd": 75
+      },
+      "signatureMoveId": "tempestade_arco",
+      "weakMoveId": "centelha_rapida",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#facc15",
+          "d": "#a16207",
+          "h": "#fef08a",
+          "w": "#ffffff",
+          "a": "#38bdf8"
+        },
+        "pixels": [
+          ".kk........kk...",
+          "khhk......khhk..",
+          "kbbhk....khbbk..",
+          "kbbbbkkkkbbbbk..",
+          "kbbbbbbbbbbbbk..",
+          "kbbwbbkkbbwbbk..",
+          "kbbbbbbbbbbbbk..",
+          ".kddbbhhhhbbk...",
+          "..kbbhhhhbbk.kk.",
+          "..kbbbbbbbbkkhak",
+          "..kbbddddbbkkhak",
+          "..kbbbbbbbbkkhhk",
+          "...kbbk..kbbkkk.",
+          "...kddk..kddk...",
+          "...khhk..khhk...",
+          "...kkk....kkk..."
+        ]
+      }
+    },
+    {
+      "id": "glaciel",
+      "name": "Glaciel",
+      "title": "Lobo da Neve",
+      "type": "gelo",
+      "types": [
+        "gelo",
+        "agua"
+      ],
+      "description": "Habita geleiras ancestrais, condensando ar polar em lanças de gelo translúcidas.",
+      "stats": {
+        "maxHp": 182,
+        "atk": 64,
+        "def": 48,
+        "spd": 62
+      },
+      "signatureMoveId": "nevasca_aurora",
+      "weakMoveId": "sopro_gelado",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#67e8f9",
+          "d": "#0891b2",
+          "h": "#cffafe",
+          "w": "#ffffff",
+          "a": "#c084fc"
+        },
+        "pixels": [
+          "..kk........kk..",
+          ".kaak......kaak.",
+          ".kbhak....kahbbk.",
+          ".kbbbbkkkkbbbbk.",
+          ".kbbbbbbbbbbbbk.",
+          "kbbwbbkkbbwbbk..",
+          "kbbbbbbbbbbbbk..",
+          ".kddbbhhhhbbk...",
+          "..kbbhhhhbbk.kk.",
+          "..kbbbbbbbbkkahk",
+          "..kbbddddbbkkahk",
+          "..kbbbbbbbbkkhhk",
+          "...kbbk..kbbkkk.",
+          "...kddk..kddk...",
+          "...khhk..khhk...",
+          "...kkk....kkk..."
+        ]
+      }
+    },
+    {
+      "id": "viperox",
+      "name": "Viperox",
+      "title": "Serpente Peçonhenta",
+      "type": "venenoso",
+      "types": [
+        "venenoso",
+        "terra"
+      ],
+      "description": "Rasteja sorrateiramente em pântanos rochosos, atacando com veneno letal de ação rápida.",
+      "stats": {
+        "maxHp": 180,
+        "atk": 65,
+        "def": 46,
+        "spd": 64
+      },
+      "signatureMoveId": "bote_abissal",
+      "weakMoveId": "dardo_toxico",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#a855f7",
+          "d": "#581c87",
+          "h": "#e9d5ff",
+          "w": "#fef08a",
+          "a": "#d97706"
+        },
+        "pixels": [
+          "....kkkk........",
+          "...khhhhk.......",
+          "..khbhhbbk......",
+          "..kbbwbbwbk.....",
+          "..kbbbbbbbk.kk..",
+          "...kddbbddkkahk.",
+          "...kbbbbbbkkahk.",
+          "..kbbbbbbbbkkk..",
+          ".kbbbbddbbbbk...",
+          "kbbbbk..kbbbbk..",
+          "kbbbk....kbbbk..",
+          ".kddk....kddk...",
+          "..khk....khk....",
+          "...kk....kk.....",
+          "................",
+          "................"
+        ]
+      }
+    },
+    {
+      "id": "brawlfang",
+      "name": "Brawlfang",
+      "title": "Gorila Demolidor",
+      "type": "lutador",
+      "types": [
+        "lutador",
+        "pedra"
+      ],
+      "description": "Poder muscular descomunal reforçado por placas rochosas nos punhos e ombros.",
+      "stats": {
+        "maxHp": 192,
+        "atk": 74,
+        "def": 52,
+        "spd": 46
+      },
+      "signatureMoveId": "impacto_demolidor",
+      "weakMoveId": "golpe_marcial",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#f97316",
+          "d": "#9a3412",
+          "h": "#fed7aa",
+          "w": "#ffffff",
+          "a": "#a8a29e"
+        },
+        "pixels": [
+          "....kkaaaakk....",
+          "...kaaaaaaaak...",
+          "..kaabbbbhhaak..",
+          "..kbbbbbbbbbbk..",
+          ".kbbwbbbbwbbbbk.",
+          ".kbbbbbbbbbbbbk.",
+          "kkddbbhhhhbbddkk",
+          "kddbbbbbbbbbbddk",
+          "kddbbbbbbbbbbddk",
+          "kkddbbddddbbddkk",
+          ".kddddddddddddk.",
+          "..kbbbbbbbbbbk..",
+          "..kbbk....kbbk..",
+          ".kbbbk....kbbbk.",
+          ".kdddk....kdddk.",
+          "..kkk......kkk.."
+        ]
+      }
+    },
+    {
+      "id": "ferrodon",
+      "name": "Ferrodon",
+      "title": "Tatu Blindado",
+      "type": "metal",
+      "types": [
+        "metal",
+        "terra"
+      ],
+      "description": "Envolve-se numa esfera de aço espesso quase impenetrável que esmaga oponentes.",
+      "stats": {
+        "maxHp": 210,
+        "atk": 54,
+        "def": 72,
+        "spd": 34
+      },
+      "signatureMoveId": "baluarte_ferreo",
+      "weakMoveId": "garra_ferro",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#94a3b8",
+          "d": "#475569",
+          "h": "#f1f5f9",
+          "w": "#ffffff",
+          "a": "#d97706"
+        },
+        "pixels": [
+          "......kkkk......",
+          "....kkhhhhkk....",
+          "...khhhhhhhhk...",
+          "..khbbbbbbbbhk..",
+          ".kbbbbbbbbbbbbk.",
+          "kbbwbbbbbbwbbbbk",
+          "kbbbbbbbbbbbbbbk",
+          "kddbbhhhhbbddddk",
+          "kddbbbbbbbbddddk",
+          ".kddbbddddbbddk.",
+          "..kddddddddddk..",
+          "..kbbbbbbbbbbk..",
+          "..kbbk....kbbk..",
+          ".kbbbk....kbbbk.",
+          ".kdddk....kdddk.",
+          "..kkk......kkk.."
+        ]
+      }
+    },
+    {
+      "id": "toxidraco",
+      "name": "Toxidraco",
+      "title": "Wyvern da Peste",
+      "type": "venenoso",
+      "types": [
+        "venenoso",
+        "aereo"
+      ],
+      "description": "Mergulha velozmente dos céus espalhando névoas púrpuras de pura corrosão.",
+      "stats": {
+        "maxHp": 172,
+        "atk": 67,
+        "def": 42,
+        "spd": 70
+      },
+      "signatureMoveId": "rajada_peconhenta",
+      "weakMoveId": "dardo_toxico",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#a855f7",
+          "d": "#6b21a8",
+          "h": "#f3e8ff",
+          "w": "#ffffff",
+          "a": "#38bdf8"
+        },
+        "pixels": [
+          "....kk....kk....",
+          "...khhk..khhk...",
+          "..khbhk..khbhk..",
+          "..kbbbbkkbbbbk..",
+          ".kbbbbbbbbbbbbk.",
+          ".kbbwbbkkbbwbbk.",
+          ".kbbbbbbbbbbbbk.",
+          "kddbbhhhhbbddddk",
+          "kddbbbbbbbbddddk",
+          ".kddbbddbbddddk.",
+          "..kbbbbbbbbbbk..",
+          "...kbbbbbbbbk...",
+          "...kddbbbbddk...",
+          "...kbbk..kbbk...",
+          "...kddk..kddk...",
+          "...kkk....kkk..."
+        ]
+      }
+    },
+    {
+      "id": "pyroclast",
+      "name": "Pyroclast",
+      "title": "Golem de Magma",
+      "type": "fogo",
+      "types": [
+        "fogo",
+        "metal"
+      ],
+      "description": "Fusão incandescente de aço e rocha fundida que queima qualquer atacante.",
+      "stats": {
+        "maxHp": 188,
+        "atk": 70,
+        "def": 62,
+        "spd": 38
+      },
+      "signatureMoveId": "forja_incandescente",
+      "weakMoveId": "faisca_brasa",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#ea580c",
+          "d": "#991b1b",
+          "h": "#fed7aa",
+          "w": "#f8fafc",
+          "a": "#64748b"
+        },
+        "pixels": [
+          "....kkaaaakk....",
+          "...kaaaaaaaak...",
+          "..kaabbbbhhaak..",
+          "..kbbbbbbbbbbk..",
+          ".kbbwbbbbwbbbbk.",
+          ".kbbbbbbbbbbbbk.",
+          "kkddbbhhhhbbddkk",
+          "kddbbbbbbbbbbddk",
+          "kddbbbbbbbbbbddk",
+          "kkddbbddddbbddkk",
+          ".kddddddddddddk.",
+          "..kbbbbbbbbbbk..",
+          "..kbbk....kbbk..",
+          ".kbbbk....kbbbk.",
+          ".kdddk....kdddk.",
+          "..kkk......kkk.."
+        ]
+      }
+    },
+    {
+      "id": "voltstriker",
+      "name": "Voltstriker",
+      "title": "Guepardo do Trovão",
+      "type": "raio",
+      "types": [
+        "raio",
+        "lutador"
+      ],
+      "description": "Treinado em artes pugilistas relâmpago, ataca mais rápido do que o olho humano pode acompanhar.",
+      "stats": {
+        "maxHp": 174,
+        "atk": 72,
+        "def": 44,
+        "spd": 74
+      },
+      "signatureMoveId": "punho_eletrico",
+      "weakMoveId": "centelha_rapida",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#facc15",
+          "d": "#ca8a04",
+          "h": "#fef08a",
+          "w": "#ffffff",
+          "a": "#f97316"
+        },
+        "pixels": [
+          ".kk........kk...",
+          "khhk......khhk..",
+          "kaahk....khaahk.",
+          "kaabbkkkkbbaak..",
+          "kbbbbbbbbbbbbk..",
+          "kbbwbbkkbbwbbk..",
+          "kbbbbbbbbbbbbk..",
+          ".kddbbhhhhbbk...",
+          "..kbbhhhhbbk.kk.",
+          "..kbbbbbbbbkkhak",
+          "..kbbddddbbkkhak",
+          "..kbbbbbbbbkkhhk",
+          "...kbbk..kbbkkk.",
+          "...kddk..kddk...",
+          "...khhk..khhk...",
+          "...kkk....kkk..."
+        ]
+      }
+    },
+    {
+      "id": "glaciotitan",
+      "name": "Glaciotitan",
+      "title": "Titã de Aço Frio",
+      "type": "gelo",
+      "types": [
+        "gelo",
+        "metal"
+      ],
+      "description": "Monólito de permafrost revestido por placas de aço temperado no zero absoluto.",
+      "stats": {
+        "maxHp": 204,
+        "atk": 58,
+        "def": 68,
+        "spd": 36
+      },
+      "signatureMoveId": "lamina_permafrost",
+      "weakMoveId": "sopro_gelado",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#67e8f9",
+          "d": "#0e7490",
+          "h": "#cffafe",
+          "w": "#ffffff",
+          "a": "#94a3b8"
+        },
+        "pixels": [
+          "......kkkk......",
+          "....kkaaaakk....",
+          "...kaaaaaaaak...",
+          "..kaahhbbhhaak..",
+          "..kbbbbbbbbbbk..",
+          ".kbbwbbbbwbbbbk.",
+          ".kbbbbbbbbbbbbk.",
+          ".kddbbhhhhbbddk.",
+          "kkddbbbbbbbbddkk",
+          "kddbbbddddbbbddk",
+          "kddbbbbbbbbbbddk",
+          ".kddddddddddddk.",
+          "..kbbbbbbbbbbk..",
+          "..kbbk....kbbk..",
+          ".kdddk....kdddk.",
+          "..kkk......kkk.."
+        ]
+      }
+    },
+    {
+      "id": "venoplanta",
+      "name": "Venoplanta",
+      "title": "Flor Carnívora",
+      "type": "planta",
+      "types": [
+        "planta",
+        "venenoso"
+      ],
+      "description": "Emite perfume adocicado para atrair presas e as envolve em vinhas embebidas em ácido corrosivo.",
+      "stats": {
+        "maxHp": 196,
+        "atk": 58,
+        "def": 54,
+        "spd": 50
+      },
+      "signatureMoveId": "esporo_corrosivo",
+      "weakMoveId": "folha_corte",
+      "sprite": {
+        "width": 16,
+        "height": 16,
+        "palette": {
+          "k": "#140e1e",
+          "b": "#22c55e",
+          "d": "#15803d",
+          "h": "#86efac",
+          "w": "#fef08a",
+          "a": "#a855f7"
+        },
+        "pixels": [
+          "......kaak......",
+          ".....kaaaak.....",
+          "....kaaaaaaak...",
+          "....kaahbbhak...",
+          "...kbbkbbkbbk...",
+          "...kbbbbbbbbk...",
+          "..kbbwbbwbbbbk..",
+          "..kbbbbbbbbbbk..",
+          "..kddbbbbbbddk..",
+          ".kdddbbhhbbdddk.",
+          ".kddddddddddddk.",
+          "..kbbddddddbbk..",
+          "...kbbbbbbbbk...",
+          "...kbbk..kbbk...",
+          "...kddk..kddk...",
+          "...kkk....kkk..."
+        ]
+      }
+    }
+  ]
+}

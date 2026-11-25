@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pikamon Arena — Batalha Multiplayer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="sky-backdrop" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <header class="topbar pixel-frame">
+      <div class="brand">
+        <span class="brand-gem"></span>
+        <div>
+          <h1 class="pixel-title">PIKAMON ARENA</h1>
+          <span class="brand-sub">DUELO ELEMENTAL POR TURNOS</span>
+        </div>
+        <span class="badge-mvp">1V1 SYNC</span>
+      </div>
+      <div class="topbar-status">
+        <span id="online-count-pill" class="online-pill">0 online</span>
+        <button class="btn btn-ghost btn-sm btn-type-chart" title="Tabela de Tipos">🔢 Tipos</button>
+        <div id="connection-status" class="conn-pill offline">Conectando...</div>
+      </div>
+    </header>
+
+    <div id="error-toast" class="toast pixel-frame hidden" role="alert"></div>
+
+    <!-- SCREEN 1: LOBBY -->
+    <main id="screen-lobby" class="screen active">
+      <div class="lobby-grid">
+        <section class="panel pixel-frame lobby-card">
+          <div class="lobby-hero">
+            <div id="lobby-showcase" class="lobby-showcase" aria-hidden="true"></div>
+            <h2 class="pixel-title">MONTE SEU DUELO</h2>
+            <p class="subtitle">Turnos sincronizados pelo servidor • 8 criaturas elementais</p>
+          </div>
+
+          <div id="invite-banner" class="invite-banner hidden"></div>
+
+          <div class="field-group">
+            <label for="nickname-input">Nome do Treinador</label>
+            <input id="nickname-input" type="text" maxlength="18" placeholder="Ex: Madeline, Red, Kai..." />
+          </div>
+
+          <label class="checkbox-row">
+            <input id="public-room-checkbox" type="checkbox" checked />
+            <span>Listar sala criada em "Salas Abertas"</span>
+          </label>
+
+          <div class="lobby-actions">
+            <button id="btn-queue" class="btn btn-primary">
+              <span class="btn-icon">⚔</span> Batalha Rápida
+            </button>
+            <button id="btn-create-room" class="btn btn-secondary">
+              <span class="btn-icon">★</span> Criar Sala
+            </button>
+          </div>
+
+          <div class="divider"><span>OU ENTRE COM CÓDIGO</span></div>
+
+          <div class="join-row">
+            <input id="room-code-input" type="text" maxlength="4" placeholder="CÓDIGO (AB12)" />
+            <button id="btn-join-room" class="btn btn-accent">Entrar</button>
+          </div>
+
+          <div id="lobby-waiting-box" class="waiting-box hidden">
+            <p id="lobby-waiting-text"></p>
+            <div id="room-code-display" class="room-code-tag hidden"></div>
+            <div id="invite-link-box" class="invite-link-box hidden">
+              <input id="invite-link-input" type="text" readonly />
+              <button id="btn-copy-invite" class="btn btn-accent btn-sm">Copiar Link</button>
+            </div>
+            <p id="lan-tip-text" class="lan-tip hidden"></p>
+            <button id="btn-cancel-wait" class="btn btn-ghost btn-sm" style="margin-top:10px">Cancelar</button>
+          </div>
+        </section>
+
+        <aside class="lobby-sidebar">
+          <section class="panel pixel-frame open-rooms-panel">
+            <div class="open-rooms-header">
+              <h3 class="pixel-heading" style="margin-bottom:0">SALAS ABERTAS</h3>
+              <span class="rooms-hint">Clique para entrar</span>
+            </div>
+            <div id="open-rooms-list" class="open-rooms-list">
+              <div class="empty-rooms">Nenhuma sala aberta no momento. Crie uma ou entre na fila!</div>
+            </div>
+          </section>
+
+          <section class="panel pixel-frame online-players-panel">
+            <div class="open-rooms-header">
+              <h3 class="pixel-heading" style="margin-bottom:0">TREINADORES ONLINE</h3>
+              <span id="online-list-count" class="rooms-hint">0</span>
+            </div>
+            <ul id="online-players-list" class="online-players-list"></ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <!-- SCREEN 2: CREATURE SELECTION -->
+    <main id="screen-select" class="screen">
+      <section class="panel pixel-frame select-panel">
+        <div class="select-header">
+          <div>
+            <h2 class="pixel-title">ESCOLHA SUA EQUIPE (3 CRIATURAS)</h2>
+            <p class="subtitle">Sala <strong id="select-room-code">----</strong> • Selecione 3 criaturas para a batalha (<span id="team-counter">0/3</span>)</p>
+          </div>
+          <div class="select-actions-bar">
+            <button class="btn btn-ghost btn-sm btn-type-chart">🔢 Tabela de Tipos</button>
+            <button id="btn-confirm-team" class="btn btn-primary" disabled>Confirmar Equipe (0/3)</button>
+            <div id="opponent-draft-status" class="status-pill">Oponente escolhendo...</div>
+          </div>
+        </div>
+
+        <div id="creature-grid" class="creature-grid"></div>
+      </section>
+    </main>
+
+    <!-- SCREEN 3: BATTLE ARENA -->
+    <main id="screen-battle" class="screen">
+      <section class="battle-topbar pixel-frame">
+        <div class="turn-info">
+          <span id="turn-badge" class="turn-badge">TURNO 1</span>
+          <span id="turn-owner-text" class="turn-owner">Aguardando...</span>
+        </div>
+        <div class="battle-utility-actions">
+          <button class="btn btn-ghost btn-sm btn-type-chart">🔢 Tipos</button>
+          <button id="btn-forfeit" class="btn btn-danger btn-sm">⚑ Desistir</button>
+        </div>
+      </section>
+
+      <div class="battle-layout">
+        <div class="arena-column">
+          <div class="canvas-wrap pixel-frame">
+            <canvas id="battle-canvas"></canvas>
+
+            <div id="match-over-overlay" class="match-overlay hidden">
+              <div class="match-overlay-card pixel-frame">
+                <h2 id="match-result-title" class="pixel-title">Vitória!</h2>
+                <p id="match-result-subtitle"></p>
+                <div class="overlay-buttons">
+                  <button id="btn-rematch" class="btn btn-primary">Revanche</button>
+                  <button id="btn-back-lobby" class="btn btn-ghost">Voltar ao Lobby</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 ACTION BUTTONS: ATTACK, BUFF/DEBUFF, ITEMS, PROTECT, SWITCH -->
+          <div class="combat-controls panel pixel-frame">
+            <div class="main-action-grid">
+              <button id="menu-btn-attack" class="action-btn action-attack" data-menu="attack">
+                <span class="action-head"><span class="action-glyph">⚔</span><span
+                    class="action-title">Atacar</span></span>
+                <span class="action-sub">Assinatura &amp; Fraco</span>
+              </button>
+              <button id="menu-btn-buffdebuff" class="action-btn action-buff" data-menu="buffdebuff">
+                <span class="action-head"><span class="action-glyph">✦</span><span class="action-title">Buff /
+                    Debuff</span></span>
+                <span class="action-sub">Poder Elemental</span>
+              </button>
+              <button id="menu-btn-items" class="action-btn action-items" data-menu="items">
+                <span class="action-head"><span class="action-glyph">✚</span><span
+                    class="action-title">Itens</span></span>
+                <span class="action-sub">Cura &amp; Purificar</span>
+              </button>
+              <button id="menu-btn-protect" class="action-btn action-protect" data-menu="protect">
+                <span class="action-head"><span class="action-glyph">◈</span><span
+                    class="action-title">Proteger</span></span>
+                <span id="protect-subtext" class="action-sub">Reduz dano 85%</span>
+              </button>
+              <button id="menu-btn-switch" class="action-btn action-switch" data-menu="switch">
+                <span class="action-head"><span class="action-glyph">⇄</span><span
+                    class="action-title">Trocar</span></span>
+                <span id="switch-subtext" class="action-sub">Banco da Equipe</span>
+              </button>
+            </div>
+
+            <div id="submenu-panel" class="submenu-panel hidden">
+              <div class="submenu-header">
+                <span id="submenu-title">Opções</span>
+                <button id="btn-close-submenu" class="btn btn-ghost btn-xs">◀ Voltar</button>
+              </div>
+              <div id="submenu-list" class="submenu-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="side-column">
+          <div class="panel pixel-frame stats-panel">
+            <h3 class="pixel-heading">STATUS EM CAMPO</h3>
+            <div id="combat-stats-summary" class="stats-summary"></div>
+          </div>
+
+          <div class="panel pixel-frame log-panel">
+            <h3 class="pixel-heading">REGISTRO DA BATALHA</h3>
+            <ul id="battle-log" class="battle-log"></ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/network.js"></script>
+  <script src="js/sprites.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- TYPE CHART MODAL -->
+  <div id="type-chart-modal" class="type-chart-modal-backdrop hidden" role="dialog" aria-modal="true" aria-label="Tabela de Tipos">
+    <div class="type-chart-modal-card pixel-frame">
+      <div class="type-chart-modal-header">
+        <h2 class="pixel-title" style="font-size:1rem;margin:0">📊 TABELA DE EFICÁCIA DE TIPOS</h2>
+        <button id="btn-close-type-chart" class="btn btn-ghost btn-sm">✕ Fechar</button>
+      </div>
+      <div class="type-chart-legend">
+        <span class="tc-ultra">2×</span> Ultra Efetivo (tipo duplo) &nbsp;
+        <span class="tc-super">1.5×</span> Super Efetivo &nbsp;
+        <span class="tc-neutral">1×</span> Normal &nbsp;
+        <span class="tc-weak">0.67×</span> Pouco efetivo &nbsp;
+        <span class="tc-weak2">½×</span> Muito fraco &nbsp;
+        <span class="tc-immune">0</span> Imune
+      </div>
+      <div id="type-chart-table-wrap" class="type-chart-table-wrap"></div>
+    </div>
+  </div>
+</body>
+
+</html>

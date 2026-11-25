@@ -1,0 +1,286 @@
+{
+  "protect": {
+    "id": "proteger",
+    "name": "Proteger",
+    "description": "Cria um escudo elemental que reduz o próximo dano em 85%.",
+    "cooldown": 2,
+    "damageReduction": 0.85,
+    "animation": {
+      "style": "protect_shield",
+      "color": "#38bdf8",
+      "particleColor": "#f8fafc"
+    }
+  },
+  "moves": {
+    "faisca_brasa": {
+      "id": "faisca_brasa",
+      "name": "Faísca de Brasa",
+      "type": "fogo",
+      "category": "weak",
+      "power": 36,
+      "cooldown": 0,
+      "description": "Ataque rápido com brasas leves. Sem tempo de espera.",
+      "animation": { "style": "spark_dash", "color": "#ff5f43", "particleColor": "#ffd166" }
+    },
+    "jato_bolha": {
+      "id": "jato_bolha",
+      "name": "Jato de Bolhas",
+      "type": "agua",
+      "category": "weak",
+      "power": 36,
+      "cooldown": 0,
+      "description": "Disparo rápido de bolhas pressurizadas. Sem tempo de espera.",
+      "animation": { "style": "bubble_shot", "color": "#38bdf8", "particleColor": "#a5f3fc" }
+    },
+    "folha_corte": {
+      "id": "folha_corte",
+      "name": "Folha Cortante",
+      "type": "planta",
+      "category": "weak",
+      "power": 36,
+      "cooldown": 0,
+      "description": "Lança folhas afiadas em arco. Sem tempo de espera.",
+      "animation": { "style": "leaf_slash", "color": "#4ade80", "particleColor": "#bbf7d0" }
+    },
+    "rajada_leve": {
+      "id": "rajada_leve",
+      "name": "Rajada Cortante",
+      "type": "aereo",
+      "category": "weak",
+      "power": 36,
+      "cooldown": 0,
+      "description": "Golpe veloz de vento concentrado. Sem tempo de espera.",
+      "animation": { "style": "wind_slash", "color": "#7dd3fc", "particleColor": "#f8fafc" }
+    },
+    "lampejo_lama": {
+      "id": "lampejo_lama",
+      "name": "Disparo de Lama",
+      "type": "terra",
+      "category": "weak",
+      "power": 36,
+      "cooldown": 0,
+      "description": "Arremessa projétil de barro denso. Sem tempo de espera.",
+      "animation": { "style": "earth_toss", "color": "#d97706", "particleColor": "#fcd34d" }
+    },
+    "estilhaco_rocha": {
+      "id": "estilhaco_rocha",
+      "name": "Estilhaço de Rocha",
+      "type": "pedra",
+      "category": "weak",
+      "power": 36,
+      "cooldown": 0,
+      "description": "Lança lascas de pedra afiadas. Sem tempo de espera.",
+      "animation": { "style": "rock_shard", "color": "#a8a29e", "particleColor": "#e7e5e4" }
+    },
+    "centelha_rapida": {
+      "id": "centelha_rapida",
+      "name": "Centelha Rápida",
+      "type": "raio",
+      "category": "weak",
+      "power": 36,
+      "cooldown": 0,
+      "description": "Descarga elétrica ágil e direta. Sem tempo de espera.",
+      "animation": { "style": "bolt_zap", "color": "#facc15", "particleColor": "#ffffff" }
+    },
+    "sopro_gelado": {
+      "id": "sopro_gelado",
+      "name": "Sopro Gelado",
+      "type": "gelo",
+      "category": "weak",
+      "power": 36,
+      "cooldown": 0,
+      "description": "Rajada fria com cristais de gelo. Sem tempo de espera.",
+      "animation": { "style": "ice_shard", "color": "#67e8f9", "particleColor": "#ecfeff" }
+    },
+    "dardo_toxico": {
+      "id": "dardo_toxico",
+      "name": "Dardo Tóxico",
+      "type": "venenoso",
+      "category": "weak",
+      "power": 36,
+      "cooldown": 0,
+      "description": "Dispara agulhas com veneno corrosivo. Sem tempo de espera.",
+      "animation": { "style": "poison_dart", "color": "#a855f7", "particleColor": "#f3e8ff" }
+    },
+    "golpe_marcial": {
+      "id": "golpe_marcial",
+      "name": "Golpe Marcial",
+      "type": "lutador",
+      "category": "weak",
+      "power": 38,
+      "cooldown": 0,
+      "description": "Sequência disciplinada de socos contundentes. Sem tempo de espera.",
+      "animation": { "style": "martial_strike", "color": "#f97316", "particleColor": "#ffedd5" }
+    },
+    "garra_ferro": {
+      "id": "garra_ferro",
+      "name": "Garra de Ferro",
+      "type": "metal",
+      "category": "weak",
+      "power": 36,
+      "cooldown": 0,
+      "description": "Corte preciso com lâminas de aço reforçado. Sem tempo de espera.",
+      "animation": { "style": "metal_claw", "color": "#94a3b8", "particleColor": "#f1f5f9" }
+    },
+    "meteoro_rubi": {
+      "id": "meteoro_rubi",
+      "name": "Meteoro Rubi",
+      "type": "fogo",
+      "category": "signature",
+      "power": 78,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Pyrokit: mergulho flamejante com impacto explosivo.",
+      "animation": { "style": "meteor_slam", "color": "#ff4d2e", "particleColor": "#ffe066" }
+    },
+    "mare_abissal": {
+      "id": "mare_abissal",
+      "name": "Maré Abissal",
+      "type": "agua",
+      "category": "signature",
+      "power": 76,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Aquafin: onda colossal que esmaga o oponente.",
+      "animation": { "style": "tidal_wave", "color": "#0ea5e9", "particleColor": "#bae6fd" }
+    },
+    "espinho_ancestral": {
+      "id": "espinho_ancestral",
+      "name": "Espinho Ancestral",
+      "type": "planta",
+      "category": "signature",
+      "power": 76,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Florabrot: raízes colossais irrompem sob o alvo.",
+      "animation": { "style": "vine_eruption", "color": "#22c55e", "particleColor": "#fde047" }
+    },
+    "ciclone_celeste": {
+      "id": "ciclone_celeste",
+      "name": "Ciclone Celeste",
+      "type": "aereo",
+      "category": "signature",
+      "power": 75,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Zephyrix: vórtice cortante de alta altitude.",
+      "animation": { "style": "cyclone_burst", "color": "#38bdf8", "particleColor": "#f8fafc" }
+    },
+    "fenda_sismica": {
+      "id": "fenda_sismica",
+      "name": "Fenda Sísmica",
+      "type": "terra",
+      "category": "signature",
+      "power": 80,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Terramon: tremor que parte o solo sob o oponente.",
+      "animation": { "style": "quake_slam", "color": "#b45309", "particleColor": "#fbbf24" }
+    },
+    "colapso_cristal": {
+      "id": "colapso_cristal",
+      "name": "Colapso de Cristal",
+      "type": "pedra",
+      "category": "signature",
+      "power": 82,
+      "cooldown": 3,
+      "description": "Ataque assinatura de Granitox: monolitos de quartzo caem sobre o alvo.",
+      "animation": { "style": "boulder_drop", "color": "#d6d3d1", "particleColor": "#f472b6" }
+    },
+    "tempestade_arco": {
+      "id": "tempestade_arco",
+      "name": "Tempestade Arco",
+      "type": "raio",
+      "category": "signature",
+      "power": 78,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Voltrix: relâmpago em zigue-zague de alta tensão.",
+      "animation": { "style": "thunder_strike", "color": "#eab308", "particleColor": "#ffffff" }
+    },
+    "nevasca_aurora": {
+      "id": "nevasca_aurora",
+      "name": "Nevasca Aurora",
+      "type": "gelo",
+      "category": "signature",
+      "power": 77,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Glaciel: lança glacial cercada por luz boreal.",
+      "animation": { "style": "aurora_lance", "color": "#22d3ee", "particleColor": "#f0abfc" }
+    },
+    "bote_abissal": {
+      "id": "bote_abissal",
+      "name": "Bote Abissal",
+      "type": "venenoso",
+      "category": "signature",
+      "power": 78,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Viperox: bote súbito inoculando toxina paralítica.",
+      "animation": { "style": "venom_strike", "color": "#a855f7", "particleColor": "#4ade80" }
+    },
+    "impacto_demolidor": {
+      "id": "impacto_demolidor",
+      "name": "Impacto Demolidor",
+      "type": "lutador",
+      "category": "signature",
+      "power": 82,
+      "cooldown": 3,
+      "description": "Ataque assinatura de Brawlfang: punho avassalador que quebra defesas minerais.",
+      "animation": { "style": "demolition_punch", "color": "#f97316", "particleColor": "#fed7aa" }
+    },
+    "baluarte_ferreo": {
+      "id": "baluarte_ferreo",
+      "name": "Baluarte Férreo",
+      "type": "metal",
+      "category": "signature",
+      "power": 76,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Ferrodon: investida de carapaça reforçada em titânio.",
+      "animation": { "style": "iron_charge", "color": "#94a3b8", "particleColor": "#e2e8f0" }
+    },
+    "rajada_peconhenta": {
+      "id": "rajada_peconhenta",
+      "name": "Rajada Peçonhenta",
+      "type": "venenoso",
+      "category": "signature",
+      "power": 77,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Toxidraco: tempestade de névoa corrosiva vinda dos céus.",
+      "animation": { "style": "toxic_gale", "color": "#9333ea", "particleColor": "#7dd3fc" }
+    },
+    "forja_incandescente": {
+      "id": "forja_incandescente",
+      "name": "Forja Incandescente",
+      "type": "fogo",
+      "category": "signature",
+      "power": 80,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Pyroclast: metal fundido arremessado a temperaturas extremas.",
+      "animation": { "style": "molten_slag", "color": "#ea580c", "particleColor": "#cbd5e1" }
+    },
+    "punho_eletrico": {
+      "id": "punho_eletrico",
+      "name": "Punho Elétrico",
+      "type": "raio",
+      "category": "signature",
+      "power": 80,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Voltstriker: soco marcial potencializado por 50.000 volts.",
+      "animation": { "style": "thunder_punch", "color": "#facc15", "particleColor": "#fb923c" }
+    },
+    "lamina_permafrost": {
+      "id": "lamina_permafrost",
+      "name": "Lâmina Permafrost",
+      "type": "gelo",
+      "category": "signature",
+      "power": 78,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Glaciotitan: lâmina de aço temperada no zero absoluto.",
+      "animation": { "style": "frost_blade", "color": "#38bdf8", "particleColor": "#94a3b8" }
+    },
+    "esporo_corrosivo": {
+      "id": "esporo_corrosivo",
+      "name": "Esporo Corrosivo",
+      "type": "planta",
+      "category": "signature",
+      "power": 76,
+      "cooldown": 2,
+      "description": "Ataque assinatura de Venoplanta: floresce tentáculos de espinhos embebidos em veneno.",
+      "animation": { "style": "acid_bloom", "color": "#22c55e", "particleColor": "#c084fc" }
+    }
+  }
+}

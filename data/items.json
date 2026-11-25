@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "id": "pocao_simples",
+      "name": "Poção Simples",
+      "kind": "heal",
+      "healAmount": 30,
+      "quantity": 3,
+      "description": "Restaura 30 HP da criatura.",
+      "animation": { "style": "heal_light", "color": "#4ade80", "particleColor": "#bbf7d0" }
+    },
+    {
+      "id": "super_pocao",
+      "name": "Super Poção",
+      "kind": "heal",
+      "healAmount": 55,
+      "quantity": 2,
+      "description": "Restaura 55 HP da criatura.",
+      "animation": { "style": "heal_medium", "color": "#22c55e", "particleColor": "#fef08a" }
+    },
+    {
+      "id": "pocao_maxima",
+      "name": "Poção Máxima",
+      "kind": "heal",
+      "healAmount": 90,
+      "quantity": 1,
+      "description": "Restaura 90 HP da criatura.",
+      "animation": { "style": "heal_max", "color": "#10b981", "particleColor": "#fde047" }
+    },
+    {
+      "id": "erva_purificadora",
+      "name": "Erva Purificadora",
+      "kind": "cleanse",
+      "healAmount": 12,
+      "bonusBuff": null,
+      "quantity": 2,
+      "description": "Remove todos os debuffs ativos e cura 12 HP.",
+      "animation": { "style": "cleanse_herb", "color": "#34d399", "particleColor": "#ecfeff" }
+    },
+    {
+      "id": "elixir_elemental",
+      "name": "Elixir Elemental",
+      "kind": "cleanse",
+      "healAmount": 0,
+      "bonusBuff": {
+        "id": "buff_elixir",
+        "name": "Aura Cristalina",
+        "duration": 2,
+        "modifiers": { "atkMul": 1.0, "defMul": 1.2, "spdMul": 1.0, "hot": 0 }
+      },
+      "quantity": 1,
+      "description": "Remove todos os debuffs ativos e concede +20% DEF por 2 turnos.",
+      "animation": { "style": "cleanse_elixir", "color": "#38bdf8", "particleColor": "#f0abfc" }
+    }
+  ]
+}
+
